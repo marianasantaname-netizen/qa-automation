@@ -20,7 +20,7 @@ Aqui documento minha evolução em automação web, testes automatizados, boas p
 
 ## 🛠️ Ferramentas
 
-- Python
+- Java
 - Playwright
 - Selenium
 - Pytest
