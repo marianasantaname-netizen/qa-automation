@@ -1,0 +1,5 @@
+target/
+
+# Local JDK installations / bundled archives
+jdk-21/
+java-17-openjdk-17.0.19.0.10-1.win.jdk.x86_64/
