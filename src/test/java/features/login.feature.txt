@@ -1,0 +1,22 @@
+Feature: Login no sistema
+
+  @positivo
+  Scenario: Login com credenciais válidas
+  Given que estou na página de login
+  When eu insiro o usuário "202602236222@alunos.estacio.br"
+  And clico em next
+  Then devo ver a mensagem "Enter password"
+
+    @positivo
+  Scenario: Login com credenciais válidas
+  Given que estou na página de senha
+  When eu insiro o Enter password "202602236222@alunos.estacio.br"
+  And clico em sign in
+  Then devo ver a mensagem "Enter password"
+
+  @negativo
+  Scenario: Login com credenciais inválidas
+  Given que estou na página de login
+  When eu insiro o usuário "202602236222@alunos.estacio.br@"
+  And clico em next
+  Then devo ver a mensagem "The phone number you entered isn't valid. Your phone number can contain numbers, spaces, and these special characters: ( ) [ ] . - # * /"

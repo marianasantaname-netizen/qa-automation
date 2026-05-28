@@ -1,0 +1,15 @@
+Feature: Login no sistema
+
+  @positivo
+  Scenario: Login com credenciais válidas
+  Given que estou na página de senha
+  When eu insiro o Enter password "433860@Ma"
+  And clico em sign in
+  Then devo ver a mensagem "Boa Noite Mariana"
+
+  @negativo
+  Scenario: Login com credenciais inválidas
+  Given que estou na página de senha
+  When eu insiro o Enter password "123456789"
+  And clico em sign in
+  Then devo ver a mensagem "Boa Noite Mariana"
