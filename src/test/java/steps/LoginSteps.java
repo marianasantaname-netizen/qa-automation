@@ -8,7 +8,7 @@ import pages.LoginPage;
 public class LoginSteps extends BaseTest {
     private LoginPage loginPage;
 
-    @Given("que estou na página de login")
+    @Given("que estou na página de (?:login|senha)")
     public void abrirPaginaLogin() {
         loginPage = new LoginPage(page);
         loginPage.navigate();
@@ -19,12 +19,17 @@ public class LoginSteps extends BaseTest {
         loginPage.enterUsername(usuario);
     }
 
+    @When("eu insiro o Enter password {string}")
+    public void inserirSenhaComTexto(String senha) {
+        loginPage.enterPassword(senha);
+    }
+
     @When("eu insiro a senha {string}")
     public void inserirSenha(String senha) {
         loginPage.enterPassword(senha);
     }
 
-    @When("clico em login")
+    @When("clico em (?:login|sign in|next)")
     public void clicarLogin() {
         loginPage.clickLogin();
     }

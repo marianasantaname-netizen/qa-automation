@@ -1,4 +1,4 @@
-package tests;
+package steps;
 
 import base.BaseTest;
 import org.junit.jupiter.api.Assertions;
